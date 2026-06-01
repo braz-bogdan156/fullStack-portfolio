@@ -4,205 +4,315 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume Page</title>
+    <meta name="description"
+        content="Bohdan Brazhnyk portfolio: selected full-stack projects and modern JavaScript stack.">
+    <title>Bohdan Brazhnyk | Projects & Stack</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
         rel="stylesheet">
 
+    <script>document.documentElement.classList.add("js");</script>
     <link rel="stylesheet" href="./css/styles.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script defer src="./js/app.js"></script>
 </head>
 
 <body>
-    <!-- Wrapper -->
-    <div class="wrapper">
-        <!-- Main Content ( the right side of the resume) -->
-        <div class="main-content">
-            <!-- My info -->
-            <div>
-                <h2 class="my-profession">Full-Stack Developer</h2>
-                <h1 class="my-name">Bohdan Brazhnyk</h1>
-                <p class="my-paragraph">A results-driven Fullstack Developer with 2 years of
-                    commercial experience building interactive,
-                    responsive, and scalable web applications.
-                    Proficient in front-end (React, Next.js, TypeScript) and back-end (Node.js, Express, Nest.js) development.
-                    Experienced in creating REST APIs, real-time features with WebSocket, and secure authentication using JWT and
-                    Firebase. Strong team player in Agile/Scrum environments, passionate about clean architecture and continuous growth
-                    in modern web technologies. </p>
-            </div>
-            <!-- Projects -->
-            <div>
-                <h3 class="project-main-title">Projects (The backend may take a few moments to initialize. Once it's ready, feel free to
-                    open the frontend and explore the app.)</h3>
-                <ul class="my-project-list">
-                    <li class="my-project-item"><a class="my-project-item-link" href="https://ui-top-frontend.vercel.app" target="_blank">
-                       https://ui-top-frontend.vercel.app</a>
-                        <span class="my-project-item-tech">......................
-                            [ React + TypeScript + Axios + CSS Modules ]
-                        </span>
-                       </li>
-                       <li class="my-project-item"><a class="my-project-item-link" href="https://ui-top-backend.onrender.com" target="_blank">
-                       https://ui-top-backend.onrender.com</a>
-                        <span class="my-project-item-tech">......................
-                            [Nest.js + TypeScript + TypeORM + SQLLite ]
-                        </span>
-                       </li>
-                    <li class="my-project-item"><a class="my-project-item-link" href="https://blogfrontend-nine-pearl.vercel.app" target="_blank">
-                        https://blogfrontend-nine-pearl.vercel.app</a>
-                        <span class="my-project-item-tech">........
-                            [ React + Redux Toolkit + React Hook Form + Zod]
-                        </span>
-                        </li>
-                        <li class="my-project-item"><a class="my-project-item-link" href="https://blog-backend-t2pc.onrender.com" target="_blank">
-                            https://blog-backend-t2pc.onrender.com</a>
-                            <span class="my-project-item-tech">.....
-                                [Nest + PostgreSQL + Sequelize ORM + TypeScript ]
-                            </span>
-                            </li>
-                            <li class="my-project-item"><a class="my-project-item-link" href="https://galactic-bounty-frontend-l4vad9z0c-braz-bogdan156s-projects.vercel.app
-                            " target="_blank">
-                        https://galactic-bounty-frontend-l4vad9z0c-braz-bogdan156s-projects.vercel.app
-</a>
-                        <span class="my-project-item-tech">........
-                            [ React + CSS Modules + Vite + Eslint]
-                        </span>
-                        </li>
-                        <li class="my-project-item"><a class="my-project-item-link" href="https://galacticbounty-backend.onrender.com" target="_blank">
-                           https://galacticbounty-backend.onrender.com</a>
-                            <span class="my-project-item-tech">...................
-                                [MongoDB + Mongoose + Express + Node.js + JWT + bcrypt]
-                            </span>
-                            </li>
-                        </ul>
-            </div>
-            <!-- Work experience -->
-            <div class="work-experience">
-                <h3 class="work-main-title">Work experience</h3>
-                <!-- Company-1 -->
-                <div>
-                    <h4 class="company-title">Front-End Developer  
-                       <span class="company-title-another">Commercial Experience</span> 
-                    </h4>
-                    <p class="company-paragraph">December 2022 - December 2024 
-                        <span class="company-line">|</span> Ukraine
-                    </p>
-                    <ul class="company-list">
-                        <li class="company-list-item">Project Development: Developed various web applications, including a PWA using Next.js 14.0.4 with infinite 
-                            scroll functionality for dynamic content loading. Rick and Morty Project </li>
-                        <li class="company-list-item">Collaborative Projects: Participated in team projects to develop user-friendly interfaces for review pages and 
-                            gym calendars, ensuring functional and intuitive user interactions. Reviews Project PWA Gyms Project</li>
-                        <li class="company-list-item">Code Integration: Worked in a team environment, creating individual branches, and performing merging and 
-                            pull requests to integrate code changes into the main project. </li>
+    <div class="site-shell">
+        <header class="topbar" data-animate>
+            <a class="brand" href="#top" aria-label="Bohdan Brazhnyk portfolio home">
+                <span class="brand-mark">BB</span>
+                <span class="brand-name">Bohdan Brazhnyk</span>
+            </a>
 
-                    </ul>
+            <nav class="nav" aria-label="Main navigation">
+                <a href="#projects">Projects</a>
+                <a href="#stack">Stack</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <main id="top">
+            <section class="hero section-block" aria-labelledby="hero-title">
+                <canvas id="neon-canvas" class="neon-canvas" aria-hidden="true"></canvas>
+                <div class="hero-grid">
+                    <div class="hero-copy">
+                        <p class="eyebrow" data-animate>Full-Stack Developer</p>
+                        <h1 id="hero-title" data-animate>Projects that feel sharp, fast, and alive.</h1>
+                        <p class="hero-lead" data-animate>
+                            A focused portfolio of web apps built with React, Next.js, Node.js, Nest.js, REST APIs,
+                            real-time logic, maps, auth, and clean TypeScript flows.
+                        </p>
+
+                        <div class="hero-actions" data-animate>
+                            <a class="button button-primary" href="#projects">View projects</a>
+                            <a class="button button-secondary" href="mailto:brazbogdan@gmail.com">Get in touch</a>
+                        </div>
+
+                        <dl class="hero-metrics" data-animate>
+                            <div>
+                                <dt>6</dt>
+                                <dd>live builds</dd>
+                            </div>
+                            <div>
+                                <dt>Full-stack</dt>
+                                <dd>React + Node</dd>
+                            </div>
+                            <div>
+                                <dt>TypeScript</dt>
+                                <dd>core workflow</dd>
+                            </div>
+                        </dl>
                     </div>
-                <!-- Company-2 -->
-                <div>
-                    <h4 class="company-title">Full-Stack Developer 
-                        <span class="company-title-another">Freelance</span> 
-                    </h4>
-                    <p class="company-paragraph">May 2024 - April 2025 
-                        <span class="company-line">|</span>
-                         Ukraine</p>
-                    <ul class="company-list">
-                        <li class="company-list-item">Developed a full-stack app using React + Node.js + MongoDB with JWT
-                            authentication and WebSocket real-time features (games, status updates) or React + Node.js + PostgreSQL .</li>
-                        <li class="company-list-item">Implemented pagination, filtering, commentsection, and role-based access</li>
-                        <li class="company-list-item">Front-end built with React Query, Redux, React Router;
-                            back-end with Express and Mongoose schemas or Nest REST API and Prisma, Sequilize models. </li>
-                        <li class="company-list-item">Integrated Firebase Auth (email/password) in pet projects</li>
-                    </ul>
-                </div>
-                <!-- Company-3 -->
-                <div>
-                    <h4 class="company-title">Pure Freelancer 
-                        <span class="company-title-another"> Freelance Copywriting and Rewriting</span>
-                    </h4>
-                    <p class="company-paragraph">Jule 2021 - Octomber 2023 
-                        <span class="company-line">|</span>
-                        Ukraine</p>
-                    <ul class="company-list">
-                        <li class="company-list-item">Copywriting and Rewriting: Created and revised content 
-                            for various clients, ensuring clarity, 
-                            engagement, and adherence to client specifications. </li>
-                        <li class="company-list-item">Presentation Development: Designed and developed presentations for clients,
-                             focusing on clear communication of 
-                             ideas and professional visual design.</li>
-                        <li class="company-list-item">Content Strategy: Developed content strategies 
-                            for clients to enhance their online 
-                            presence and effectively reach their target audience. </li>
 
-                    </ul>
+                    <aside class="hero-profile" data-tilt data-animate aria-label="Developer profile">
+                        <div class="profile-media">
+                            <img src="./img/resume.png" alt="Bohdan Brazhnyk portrait">
+                        </div>
+                        <div class="profile-copy">
+                            <p class="profile-role">Available for web product work</p>
+                            <p>Interfaces, APIs, authentication, dashboards, maps, and real-time features.</p>
+                        </div>
+                    </aside>
                 </div>
-            </div>
-            <!-- Education -->
-            <div>
-                <h3 class="education-main-title">Education</h3>
-                <h4 class="education-title-another">Igor Sikorsky Kyiv Polytechnic Institute</h4>
-                <h5>Engineering and Programming Infocommunications</h5>
-                <p class="education-paragraph">September 2020 - January 2026 
-                    <span class="company-line">|</span>
-                     Ukraine</p>
-            </div>
-        </div>
-        <!-- Sidebar( the left side of the resume) -->
+            </section>
 
-        <aside class="sidebar">
-            <img src="./img/resume.png" alt="resume" width="370" class="sidebar-image">
-            <div class="sidebar-content">
-            <!-- Contacts -->
-            <div class="sidebar-container">
-                <h3 class="sidebar-title">Contacts</h3>
-                <p class="contacts-item">
-                    <span class="contacts-type">C:</span> 
-                    <a href="tel:+388888888888" class="contacts-link">+38 096 802 08 05</a>
-                </p>
-                <p class="contacts-item">
-                    <span class="contacts-type">E:</span> 
-                    <a href="mailto:t.goitinskiy@gmail.com" class="contacts-link">brazbogdan@gmail.com</a>
-                </p>
-            </div>
-            <!-- Tech Skills -->
-            <div class="sidebar-container">
-                <h3 class="sidebar-title">Tech Skills</h3>
-                <ul class="sidebar-list">
-                    <li class="sidebar-list-item">Frontend: HTML5, CSS3 (Flexbox, Grid,
-                        SCSS), JavaScript (ES6+), TypeScript, TailwindCSS, Bootstrap,
-                        React, Redux, Redux-Toolkit, Next.js</li>
-                    <li class="sidebar-list-item">Backend: Node.js, Express, Nest.js,
-                        REST API, WebSocket, Firebase, JWT,
-                        Bcrypt, ORMs(Prisma, TypeORM, Sequelize), ODM(Mongoose)</li>
-                    
-                    <li class="sidebar-list-item">Databases: MongoDB,
-                        Firebase, MySQL, PostgreSQL</li>
-                    <li class="sidebar-list-item">Tools: Git, GitHub, Webpack, Vite,
-                        Postman, Figma, Trello</li>
-                    <li class="sidebar-list-item">Testing: Jest, React Testing Library</li>
-                    <li class="sidebar-list-item">Devops: Docker, Kubernetes, AWS
-                    </li>
-                   </ul>
-            </div>
-            <!-- Soft Skills -->
-            <div class="sidebar-container">
-                <h3 class="sidebar-title">Soft Skills</h3>
-                <ul class="sidebar-list">
-                    <li class="sidebar-list-item">Scrum</li>
-                    <li class="sidebar-list-item">Agile</li>
-                    <li class="sidebar-list-item">GTD</li>
-                    <li class="sidebar-list-item">Teamwork</li>
-                </ul>
-            </div>
-           <!-- Languages -->
-            <div class="sidebar-container">
-                <h3 class="sidebar-title">Languages</h3>
-                <ul class="sidebar-list">
-                    <li class="sidebar-list-item">English - B1 (Intermediate)</li>
-                    <li class="sidebar-list-item">Ukrainian - Native</li>
-                    </ul>
-            </div>
-        </div>
-        </aside>
+            <section class="ticker" aria-label="Core technologies">
+                <div class="ticker-track">
+                    <span>React</span>
+                    <span>Next.js</span>
+                    <span>TypeScript</span>
+                    <span>Node.js</span>
+                    <span>Nest.js</span>
+                    <span>MongoDB</span>
+                    <span>PostgreSQL</span>
+                    <span>REST API</span>
+                    <span>WebSocket</span>
+                    <span>React</span>
+                    <span>Next.js</span>
+                    <span>TypeScript</span>
+                    <span>Node.js</span>
+                    <span>Nest.js</span>
+                    <span>MongoDB</span>
+                    <span>PostgreSQL</span>
+                    <span>REST API</span>
+                    <span>WebSocket</span>
+                </div>
+            </section>
+
+            <section id="projects" class="section-block projects-section" aria-labelledby="projects-title">
+                <div class="section-heading" data-animate>
+                    <p class="eyebrow">Selected Work</p>
+                    <h2 id="projects-title">Live projects</h2>
+                    <p>
+                        Each card links straight to a deployed build. Some backend services are hosted on Render and
+                        can need a short warm-up before the first request.
+                    </p>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="project-card project-featured" data-tilt data-animate>
+                        <div class="project-visual visual-ui-top" aria-hidden="true">
+                            <span class="visual-node visual-node-a"></span>
+                            <span class="visual-node visual-node-b"></span>
+                            <span class="visual-node visual-node-c"></span>
+                            <span class="visual-line visual-line-a"></span>
+                            <span class="visual-line visual-line-b"></span>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-type">Full-stack platform</p>
+                            <h3>UI Top</h3>
+                            <p>
+                                A React and Nest.js product flow with typed client requests, modular UI, REST endpoints,
+                                and SQL-backed data handling.
+                            </p>
+                            <ul class="tag-list" aria-label="UI Top stack">
+                                <li>React</li>
+                                <li>TypeScript</li>
+                                <li>Nest.js</li>
+                                <li>TypeORM</li>
+                                <li>SQLite</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://ui-top-frontend.vercel.app" target="_blank" rel="noreferrer">Frontend</a>
+                                <a href="https://ui-top-backend.onrender.com" target="_blank" rel="noreferrer">Backend</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card project-wide" data-tilt data-animate>
+                        <div class="project-visual visual-bounty" aria-hidden="true">
+                            <span class="visual-ring"></span>
+                            <span class="visual-dot visual-dot-a"></span>
+                            <span class="visual-dot visual-dot-b"></span>
+                            <span class="visual-dot visual-dot-c"></span>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-type">Game-inspired app</p>
+                            <h3>Galactic Bounty</h3>
+                            <p>
+                                Interactive frontend with an Express API, MongoDB models, JWT auth, bcrypt security, and
+                                a deployed client-server split.
+                            </p>
+                            <ul class="tag-list" aria-label="Galactic Bounty stack">
+                                <li>React</li>
+                                <li>Vite</li>
+                                <li>Node.js</li>
+                                <li>Express</li>
+                                <li>MongoDB</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://galactic-bounty-frontend-l4vad9z0c-braz-bogdan156s-projects.vercel.app"
+                                    target="_blank" rel="noreferrer">Frontend</a>
+                                <a href="https://galacticbounty-backend.onrender.com" target="_blank"
+                                    rel="noreferrer">Backend</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-tilt data-animate>
+                        <div class="project-visual visual-rick" aria-hidden="true">
+                            <span class="portal portal-a"></span>
+                            <span class="portal portal-b"></span>
+                            <span class="portal portal-c"></span>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-type">API catalog</p>
+                            <h3>Rick and Morty</h3>
+                            <p>
+                                Next.js app with TypeScript and REST API integration for browsing dynamic character data
+                                with a clean, fast UI.
+                            </p>
+                            <ul class="tag-list" aria-label="Rick and Morty stack">
+                                <li>Next.js</li>
+                                <li>TypeScript</li>
+                                <li>REST API</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://rick-and-morty-rho-olive.vercel.app" target="_blank"
+                                    rel="noreferrer">Open project</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-tilt data-animate>
+                        <div class="project-visual visual-map" aria-hidden="true">
+                            <span class="map-grid"></span>
+                            <span class="pin pin-a"></span>
+                            <span class="pin pin-b"></span>
+                            <span class="pin pin-c"></span>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-type">Map interface</p>
+                            <h3>Users Map</h3>
+                            <p>
+                                Responsive map experience built with React, Vite, TypeScript, Leaflet, clustering, and
+                                modular styling.
+                            </p>
+                            <ul class="tag-list" aria-label="Users Map stack">
+                                <li>React</li>
+                                <li>Vite</li>
+                                <li>TypeScript</li>
+                                <li>Leaflet</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://users-map-seven.vercel.app" target="_blank" rel="noreferrer">Open
+                                    project</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section id="stack" class="section-block stack-section" aria-labelledby="stack-title">
+                <div class="section-heading" data-animate>
+                    <p class="eyebrow">Engineering Stack</p>
+                    <h2 id="stack-title">Tools I use to ship web apps</h2>
+                    <p>
+                        Frontend, backend, database, testing, and delivery tools arranged for quick scanning.
+                    </p>
+                </div>
+
+                <div class="stack-grid">
+                    <article class="stack-card" data-animate>
+                        <h3>Frontend</h3>
+                        <ul class="skill-cloud">
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>SCSS</li>
+                            <li>JavaScript ES6+</li>
+                            <li>TypeScript</li>
+                            <li>React</li>
+                            <li>Redux Toolkit</li>
+                            <li>Next.js</li>
+                            <li>Tailwind CSS</li>
+                            <li>Bootstrap</li>
+                        </ul>
+                    </article>
+
+                    <article class="stack-card" data-animate>
+                        <h3>Backend</h3>
+                        <ul class="skill-cloud">
+                            <li>Node.js</li>
+                            <li>Express</li>
+                            <li>Nest.js</li>
+                            <li>REST API</li>
+                            <li>WebSocket</li>
+                            <li>Firebase Auth</li>
+                            <li>JWT</li>
+                            <li>bcrypt</li>
+                        </ul>
+                    </article>
+
+                    <article class="stack-card" data-animate>
+                        <h3>Data</h3>
+                        <ul class="skill-cloud">
+                            <li>MongoDB</li>
+                            <li>Mongoose</li>
+                            <li>PostgreSQL</li>
+                            <li>MySQL</li>
+                            <li>SQLite</li>
+                            <li>Prisma</li>
+                            <li>TypeORM</li>
+                            <li>Sequelize</li>
+                        </ul>
+                    </article>
+
+                    <article class="stack-card" data-animate>
+                        <h3>Workflow</h3>
+                        <ul class="skill-cloud">
+                            <li>Git</li>
+                            <li>GitHub</li>
+                            <li>Vite</li>
+                            <li>Webpack</li>
+                            <li>Postman</li>
+                            <li>Figma</li>
+                            <li>Jest</li>
+                            <li>React Testing Library</li>
+                            <li>Docker</li>
+                            <li>AWS</li>
+                            <li>Kubernetes</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section id="contact" class="contact-section" aria-labelledby="contact-title" data-animate>
+                <div>
+                    <p class="eyebrow">Contact</p>
+                    <h2 id="contact-title">Ready to build the next interface.</h2>
+                </div>
+                <div class="contact-actions">
+                    <a class="button button-primary" href="mailto:brazbogdan@gmail.com">brazbogdan@gmail.com</a>
+                    <a class="button button-secondary" href="tel:+380968020805">+38 096 802 08 05</a>
+                </div>
+            </section>
+        </main>
     </div>
 </body>
 
